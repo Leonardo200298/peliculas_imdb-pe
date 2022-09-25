@@ -29,4 +29,13 @@ class generosModel{
         $query = $this->db->prepare("INSERT INTO generos (nombre) VALUE (?)");
         $query->execute(array($genero));
     }
+
+    function eliminarGenero($idGenero){
+        $query = $this->db->prepare("DELETE FROM generos WHERE Id_genero=?");
+        $query->execute(array($idGenero));
+    }
+    function editarGenero($genero, $idGenero){
+        $query = $this->db->prepare("UPDATE generos SET nombre = ? WHERE Id_genero = ?");
+        $query->execute(array($genero, $idGenero));
+    }
 }
