@@ -10,4 +10,5 @@ class peliculasController{
         $this->model = new peliculasModel();
         $this->view = new peliculasView();
     }
+  
 }

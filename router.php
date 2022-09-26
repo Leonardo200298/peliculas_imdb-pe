@@ -1,7 +1,13 @@
 <?php
 
-require_once './controller/peliculasController.php'
-require_once './controller/generosController.php'
+
+require_once './controller/generosController.php';
+
+
+define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
+
+
+$generoController=new generosController();
 
 // leemos la accion que viene por parametro
 $action = 'home'; // acción por defecto
@@ -16,16 +22,8 @@ $params = explode('/', $action);
 // determina que camino seguir según la acción
 switch ($params[0]) {
     case 'home':
-        getPeliculas();
-        break;
-    case 'noticia':
-        
-        break;
-    case 'about':
-        $id = null;
-        if (isset($params[1])) $id = $params[1];
-        
-        break;
+        $generoController->obtenerGenero();
+      
     default:
         echo('404 Page not found');
         break;
