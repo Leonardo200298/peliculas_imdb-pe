@@ -5,11 +5,11 @@ ini_set('display_errors', '1');
 require_once './controller/generosController.php';
 require_once './controller/peliculasController.php';
 
-define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
+define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']) . '/');
 
 
-$generoController=new generosController();
-$peliculasController=new peliculasController();
+$generoController = new generosController();
+$peliculasController = new peliculasController();
 
 // leemos la accion que viene por parametro
 $action = 'home'; // acción por defecto
@@ -18,6 +18,11 @@ if (!empty($_GET['action'])) { // si viene definida la reemplazamos
     $action = $_GET['action'];
 }
 
+/* Posicionate en la carpeta donde tengas el proyecto y tira el comando
+chmod -R 777 templates_c
+chmod -R 777 libs/smarty-4.2.1
+chmod es para dar los permisos y con -R le decís que haga lo mismo con todo lo que tenga 
+adentro, si no te anda tiraselo a todo el proyecto y fue */
 
 // parsea la accion Ej: dev/juan --> ['dev', juan]
 $params = explode('/', $action);
@@ -31,9 +36,6 @@ switch ($params[0]) {
         $generoController->obtenerGenero();
         break;
     default:
-        echo('404 Page not found');
+        echo ('404 Page not found');
         break;
 }
-
-
-
