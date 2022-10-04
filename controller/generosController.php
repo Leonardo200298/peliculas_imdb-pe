@@ -1,6 +1,6 @@
 <?php
-
-
+require_once './model/generosModel.php';
+require_once './view/generosView.php';
 
 class generosController{
     private $model;
