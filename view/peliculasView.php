@@ -18,7 +18,8 @@ class peliculasView{
         }
     echo "</ul>"; */
     $this->smarty->assign('peliculas', "Todas las peliculas");
-    $this->smarty->display('templates/table.tpl'); // muestro el template   
+    $this->smarty->assign('movieArrays', $movies);
+    $this->smarty->display('templates/movieList.tpl'); // muestro el template   
 
     }
 
