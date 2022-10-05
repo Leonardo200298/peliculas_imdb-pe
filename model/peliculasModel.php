@@ -12,4 +12,5 @@ class peliculasModel{
         $peliculas = $query->fetchAll(PDO::FETCH_OBJ);
         return $peliculas;
     }
+    
 }
