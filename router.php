@@ -12,7 +12,7 @@ $generoController = new generosController();
 $peliculasController = new peliculasController();
 
 // leemos la accion que viene por parametro
-$action = 'home'; // acción por defecto
+$action = 'login'; // acción por defecto
 
 if (!empty($_GET['action'])) { // si viene definida la reemplazamos
     $action = $_GET['action'];
@@ -29,10 +29,11 @@ $params = explode('/', $action);
 
 // determina que camino seguir según la acción
 switch ($params[0]) {
+    case 'login':
+        
+        break;
     case 'home':
         $peliculasController->obtenerPeliculas();
-        break;
-    case 'generos':
         $generoController->obtenerGenero();
         break;
     default:
