@@ -1,9 +1,11 @@
 <h1>{$peliculas}</h1>
-<ul>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<ul class="list-group">
     {foreach from=$movieArrays item=$movie}
-        <li>{$movie->nombre}</li>
-        <li>{$movie->anio}</li>
-        <li>{$movie->produccion}</li>
-        <li>{$movie->recaudacion}</li>        
+        <li class="list-group-item list-group-item-action list-group-item-primary">Nombre: {$movie->nombre}</li>
+        <li class="list-group-item list-group-item-action list-group-item-primary">Fecha de lanzamiento: {$movie->anio}</li>
+        <li class="list-group-item list-group-item-action list-group-item-primary">Costo de produccion: {$movie->produccion}</li>
+        <li class="list-group-item list-group-item-action list-group-item-primary">Recaudacion: {$movie->recaudacion}</li>        
     {/foreach}
 </ul>
