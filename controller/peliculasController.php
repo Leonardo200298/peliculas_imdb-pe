@@ -11,8 +11,12 @@ class peliculasController{
         $this->view = new peliculasView();
     }
     function obtenerPeliculas(){
-        $movies=$this->model->obtenerPeliculas();
+        $movies=$this->model->obtenerPeliculasModel();
         $this->view->mostrarPeliculas($movies);
+    }
+    function detallesDePeliculas($id){
+        $moviesDetail=$this->model->detallesDePelicula($id);
+        $this->view->mostrarDetalle($moviesDetail);
     }
   
 }

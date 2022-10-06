@@ -36,6 +36,10 @@ switch ($params[0]) {
         $peliculasController->obtenerPeliculas();
         $generoController->obtenerGenero();
         break;
+    case 'detalles':
+        $id = $params[1];
+        $peliculasController->detallesDePeliculas($id);
+        break;
     default:
         echo ('404 Page not found');
         break;

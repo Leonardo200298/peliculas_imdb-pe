@@ -10,10 +10,18 @@ class peliculasView{
 
     function mostrarPeliculas($movies)
     {
+        /*  <li class="list-group-item list-group-item-action list-group-item-primary">Fecha de lanzamiento: {$movie->anio}</li>
+        <li class="list-group-item list-group-item-action list-group-item-primary">Costo de produccion: {$movie->produccion}</li>
+        <li class="list-group-item list-group-item-action list-group-item-primary">Recaudacion: {$movie->recaudacion}</li>         */
 
         $this->smarty->assign('peliculas', "Todas las peliculas");
         $this->smarty->assign('movieArrays', $movies);
         $this->smarty->display('templates/movieList.tpl'); // muestro el template   
 
+    }
+    function mostrarDetalle($moviesDetail){
+        $this->smarty->assign('detalles',"Detalles de peliculas");
+        $this->smarty->assign('detalles',$moviesDetail);
+        $this->smarty->display('templates/detailMovies.tpl'); // muestro el template   
     }
 }
