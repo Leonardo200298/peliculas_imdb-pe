@@ -7,12 +7,8 @@ require_once './controller/peliculasController.php';
 
 define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']) . '/');
 
-
-$generoController = new generosController();
-$peliculasController = new peliculasController();
-
 // leemos la accion que viene por parametro
-$action = 'login'; // acción por defecto
+$action = 'home'; // acción por defecto
 
 if (!empty($_GET['action'])) { // si viene definida la reemplazamos
     $action = $_GET['action'];
@@ -29,16 +25,21 @@ $params = explode('/', $action);
 
 // determina que camino seguir según la acción
 switch ($params[0]) {
-    case 'login':
-        
-        break;
-    case 'home':
+    case 'lista':
+        $peliculasController = new peliculasController();
+        $generoController = new generosController();
         $peliculasController->obtenerPeliculas();
-        $generoController->obtenerGenero();
+        $generoController->obtenerGeneros();
         break;
     case 'detalles':
+        $peliculasController = new peliculasController();
         $id = $params[1];
         $peliculasController->detallesDePeliculas($id);
+        break;
+    case 'peliculas':
+        $generoController = new generosController();
+        $id=$params[1];
+        $generoController->peliculasConEseGenero($id);
         break;
     default:
         echo ('404 Page not found');

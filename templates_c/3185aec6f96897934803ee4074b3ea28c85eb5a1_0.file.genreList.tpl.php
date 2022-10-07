@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-05 22:56:45
+/* Smarty version 4.2.1, created on 2022-10-07 16:53:59
   from '/opt/lampp/htdocs/carpeta/leo-imdb/templates/genreList.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_633def8d811959_21627539',
+  'unifunc' => 'content_63403d87917d50_17493800',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3185aec6f96897934803ee4074b3ea28c85eb5a1' => 
     array (
       0 => '/opt/lampp/htdocs/carpeta/leo-imdb/templates/genreList.tpl',
-      1 => 1665003399,
+      1 => 1665154436,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_633def8d811959_21627539 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63403d87917d50_17493800 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h1><?php echo $_smarty_tpl->tpl_vars['generos']->value;?>
 </h1>
 
@@ -34,8 +34,9 @@ $_smarty_tpl->tpl_vars['genre']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['genre']->value) {
 $_smarty_tpl->tpl_vars['genre']->do_else = false;
 ?>
-        <li class="list-group-item list-group-item-action list-group-item-danger">Nombre de genero: <?php echo $_smarty_tpl->tpl_vars['genre']->value->nombre;?>
-</li>
+        <li class="list-group-item list-group-item-action list-group-item-danger"><a href='peliculas/<?php echo $_smarty_tpl->tpl_vars['genre']->value->id_genero;?>
+'>Nombre de genero: <?php echo $_smarty_tpl->tpl_vars['genre']->value->nombre;?>
+</a</li>
       
     <?php
 }

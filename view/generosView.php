@@ -19,4 +19,9 @@ class generosView{
         $this->smarty->assign('genreArrays', $generos);
         $this->smarty->display('templates/genreList.tpl');
     }
+    function mostrarPeliculasDelGenero($peliculasDelGenero){
+        $this->smarty->assign('pelicula',"peliculas con este genero");
+        $this->smarty->assign('generosDePeliculas', $peliculasDelGenero);
+        $this->smarty->display('templates/peliculasConEsteGenre.tpl');
+    }
 }

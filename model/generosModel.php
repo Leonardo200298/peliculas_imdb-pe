@@ -16,7 +16,7 @@ class generosModel{
     }
 
     function obtenerGenero($genero){
-        $query = $this->db->prepare('SELECT * FROM generos WHERE Id_genero = ?');
+        $query = $this->db->prepare('SELECT * FROM generos WHERE id_genero = ?');
         $query -> execute(array($genero));
         $genre=$query->fetchAll(PDO::FETCH_OBJ);
 

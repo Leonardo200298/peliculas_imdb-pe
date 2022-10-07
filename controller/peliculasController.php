@@ -18,5 +18,6 @@ class peliculasController{
         $moviesDetail=$this->model->detallesDePelicula($id);
         $this->view->mostrarDetalle($moviesDetail);
     }
+   
   
 }

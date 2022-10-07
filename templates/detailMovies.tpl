@@ -11,6 +11,7 @@
       <li class="list-group-item list-group-item-success">Recaudacion: {$detail->recaudacion}</li>     
        
 {/foreach}
+
 </ul>
 
 
