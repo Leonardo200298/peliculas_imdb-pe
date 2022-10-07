@@ -10,6 +10,13 @@ class peliculasModel{
         $query = $this->db->prepare('SELECT * FROM peliculas');
         $query -> execute();
         $peliculas = $query->fetchAll(PDO::FETCH_OBJ);
+        foreach ($peliculas as $peli) {
+            $query = $this->db->prepare('SELECT * FROM generos WHERE id_genero = ?');
+            $query->execute([$peli->id_genero]);
+            $genero = $query->fetch(PDO::FETCH_OBJ);
+            $peli->id_genero=$genero->nombre;
+        }
+        var_dump($peliculas);
         return $peliculas;
     }
     function detallesDePelicula($id){
