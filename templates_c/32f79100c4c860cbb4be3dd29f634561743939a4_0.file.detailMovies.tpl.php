@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-07 16:38:33
+/* Smarty version 4.2.1, created on 2022-10-09 20:11:29
   from '/opt/lampp/htdocs/carpeta/leo-imdb/templates/detailMovies.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_634039e9af69a8_12516623',
+  'unifunc' => 'content_63430ed16c7f25_39440601',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '32f79100c4c860cbb4be3dd29f634561743939a4' => 
     array (
       0 => '/opt/lampp/htdocs/carpeta/leo-imdb/templates/detailMovies.tpl',
-      1 => 1665088977,
+      1 => 1665339084,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_634039e9af69a8_12516623 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63430ed16c7f25_39440601 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h1><?php echo $_smarty_tpl->tpl_vars['detalles']->value;?>
 </h1>
 
@@ -42,7 +42,8 @@ $_smarty_tpl->tpl_vars['detail']->do_else = false;
 </li>
       <li class="list-group-item list-group-item-success">Recaudacion: <?php echo $_smarty_tpl->tpl_vars['detail']->value->recaudacion;?>
 </li>     
-       
+      <li class="list-group-item list-group-item-success">nombre de genero: <?php echo $_smarty_tpl->tpl_vars['detail']->value->id_genero;?>
+</li>
 <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
