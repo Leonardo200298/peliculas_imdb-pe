@@ -7,3 +7,4 @@
        
     {/foreach}
 </ul>
+{* header generico que aparezca en todos los tpl que aparezca, el header tiene que ser un tpl *}
