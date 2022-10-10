@@ -4,6 +4,7 @@ ini_set('display_errors', '1');
 
 require_once './controller/generosController.php';
 require_once './controller/peliculasController.php';
+require_once './controller/authController.php';
 
 define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']) . '/');
 
@@ -40,6 +41,10 @@ switch ($params[0]) {
         $generoController = new generosController();
         $id=$params[1];
         $generoController->peliculasConEseGenero($id);
+        break;
+    case 'login':
+        $authController=new AuthController();
+        $authController->mostrarForm();
         break;
     default:
         echo ('404 Page not found');

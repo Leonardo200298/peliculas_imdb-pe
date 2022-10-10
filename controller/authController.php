@@ -12,7 +12,9 @@ class AuthController{
         $this->model = new UserModel();
         $this->view = new AuthView();
     }
-
+    public function mostrarForm(){
+        $this->view->mostrarForm();
+    }
     public function validacionUser(){
         $email = $_POST['email'];
         $contrasenia = $_POST['password'];

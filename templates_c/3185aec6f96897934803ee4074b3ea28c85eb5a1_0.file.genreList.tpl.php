@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-07 16:53:59
+/* Smarty version 4.2.1, created on 2022-10-10 18:01:43
   from '/opt/lampp/htdocs/carpeta/leo-imdb/templates/genreList.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_63403d87917d50_17493800',
+  'unifunc' => 'content_634441e74fa226_72132417',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3185aec6f96897934803ee4074b3ea28c85eb5a1' => 
     array (
       0 => '/opt/lampp/htdocs/carpeta/leo-imdb/templates/genreList.tpl',
-      1 => 1665154436,
+      1 => 1665417694,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63403d87917d50_17493800 (Smarty_Internal_Template $_smarty_tpl) {
-?><h1><?php echo $_smarty_tpl->tpl_vars['generos']->value;?>
+function content_634441e74fa226_72132417 (Smarty_Internal_Template $_smarty_tpl) {
+?>
+
+<h1><?php echo $_smarty_tpl->tpl_vars['generos']->value;?>
 </h1>
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-
 
 <ul class="list-group">
     <?php
