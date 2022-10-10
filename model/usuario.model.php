@@ -12,7 +12,7 @@ class UserModel{
 
     public function conseguirUsuarioPorMail($email){
         $query= $this->db->prepare('SELECT * FROM usuario WHERE mail = ?');
-        $query->execute([$email]);
+        $query->execute(array($email));
         $usuarioEmail =  $query->fetch(PDO::FETCH_OBJ);
         return $usuarioEmail;
     }

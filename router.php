@@ -39,12 +39,16 @@ switch ($params[0]) {
         break;
     case 'peliculas':
         $generoController = new generosController();
-        $id=$params[1];
+        $id = $params[1];
         $generoController->peliculasConEseGenero($id);
         break;
     case 'login':
-        $authController=new AuthController();
+        $authController = new AuthController();
         $authController->mostrarForm();
+        break;
+    case 'validacion':
+        $authController = new AuthController();
+        $authController->validacionUser();
         break;
     default:
         echo ('404 Page not found');
