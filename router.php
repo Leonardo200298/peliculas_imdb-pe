@@ -26,7 +26,7 @@ $params = explode('/', $action);
 
 // determina que camino seguir según la acción
 switch ($params[0]) {
-    case 'lista':
+    case 'home':
         $peliculasController = new peliculasController();
         $generoController = new generosController();
         $peliculasController->obtenerPeliculas();
