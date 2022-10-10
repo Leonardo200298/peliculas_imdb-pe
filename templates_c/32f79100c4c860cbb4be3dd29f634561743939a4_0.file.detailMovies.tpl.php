@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-09 20:11:29
+/* Smarty version 4.2.1, created on 2022-10-10 20:01:48
   from '/opt/lampp/htdocs/carpeta/leo-imdb/templates/detailMovies.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_63430ed16c7f25_39440601',
+  'unifunc' => 'content_63445e0cc054a1_95422400',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '32f79100c4c860cbb4be3dd29f634561743939a4' => 
     array (
       0 => '/opt/lampp/htdocs/carpeta/leo-imdb/templates/detailMovies.tpl',
-      1 => 1665339084,
+      1 => 1665417408,
       2 => 'file',
     ),
   ),
@@ -20,11 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63430ed16c7f25_39440601 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63445e0cc054a1_95422400 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h1><?php echo $_smarty_tpl->tpl_vars['detalles']->value;?>
 </h1>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
 
 <ul class="list-group">

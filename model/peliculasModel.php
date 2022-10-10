@@ -26,7 +26,7 @@ class peliculasModel{
             $query = $this->db->prepare('SELECT * FROM generos WHERE id_genero = ?');
             $query->execute([$detalle->id_genero]);
             $genero = $query->fetch(PDO::FETCH_OBJ);
-            $detalle->id_genero=$genero->nombre;
+            $detalle->id_genero=$genero->genero;
         }
         return $movieDetail;
     }

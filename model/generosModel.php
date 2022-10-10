@@ -19,12 +19,19 @@ class generosModel{
         $query = $this->db->prepare('SELECT * FROM generos WHERE id_genero = ?');
         $query -> execute(array($genero));
         $genre=$query->fetchAll(PDO::FETCH_OBJ);
+        foreach ($genre as $peliculas) {
+            $query = $this->db->prepare('SELECT * FROM peliculas WHERE id_genero = ?');
+            $query->execute([$peliculas->id_genero]);
+            $pelicula = $query->fetchAll(PDO::FETCH_OBJ);
+            $genre=$pelicula;
+            
 
+        }
         return $genre;
     }
 
     function agregarGenero($genero){
-        $query = $this->db->prepare("INSERT INTO generos (nombre) VALUE (?)");
+        $query = $this->db->prepare("INSERT INTO generos nombre VALUE ?");
         $query->execute(array($genero));
     }
 
