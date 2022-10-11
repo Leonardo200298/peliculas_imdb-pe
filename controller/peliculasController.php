@@ -9,6 +9,9 @@ class peliculasController{
     {
         $this->model = new peliculasModel();
         $this->view = new peliculasView();
+
+        //
+        session_start();
     }
     function obtenerPeliculas(){
         $movies=$this->model->obtenerPeliculasModel();
