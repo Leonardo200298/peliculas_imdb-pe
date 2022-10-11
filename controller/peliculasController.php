@@ -12,7 +12,9 @@ class peliculasController{
     }
     function obtenerPeliculas(){
         $movies=$this->model->obtenerPeliculasModel();
+        
         $this->view->mostrarPeliculas($movies);
+
     }
     function detallesDePeliculas($id){
         $moviesDetail=$this->model->detallesDePelicula($id);

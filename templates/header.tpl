@@ -1,5 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,5 +12,11 @@
     <title>Leo imdb</title>
     {* <link rel="stylesheet" href="css/estilos.css"> *}
 </head>
-<h1>Logueate <span><a href="login/">aqui</a></span></h1>
-{* <a href="">volver</a> *}
+
+<body>
+    {if !isset($smarty.session.USER_ID)}
+        <h1>Logueate <span><a href="login/">aqui</a></span></h1>
+    {else}
+        <a href="logout">Logout user:{$smarty.session.USER_EMAIL}</a>
+    {/if}
+</body>
