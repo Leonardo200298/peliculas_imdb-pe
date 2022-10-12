@@ -24,6 +24,7 @@ adentro, si no te anda tiraselo a todo el proyecto y fue */
 // parsea la accion Ej: dev/juan --> ['dev', juan]
 $params = explode('/', $action);
 
+session_start();
 // determina que camino seguir según la acción
 switch ($params[0]) {
     case 'home':
@@ -38,9 +39,9 @@ switch ($params[0]) {
         $peliculasController->detallesDePeliculas($id);
         break;
     case 'peliculas':
-        $generoController = new generosController();
+        $peliculasController = new peliculasController();
         $id = $params[1];
-        $generoController->peliculasConEseGenero($id);
+        $peliculasController->peliculasConEseGenero($id);
         break;
     case 'login':
         $authController = new AuthController();

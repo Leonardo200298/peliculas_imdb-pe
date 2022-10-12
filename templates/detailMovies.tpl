@@ -1,6 +1,6 @@
+{include file="header.tpl" }
+
 <h1>{$detalles}</h1>
-
-
 
 <ul class="list-group">
 {foreach from=$details item=$detail}

@@ -20,4 +20,9 @@ class peliculasView{
         $this->smarty->assign('details',$moviesDetail);
         $this->smarty->display('templates/detailMovies.tpl'); // muestro el template   
     }
+    function mostrarPeliculasDelGenero($peliculasDelGenero){
+        $this->smarty->assign('pelicula',"peliculas con este genero");
+        $this->smarty->assign('generosDePeliculas', $peliculasDelGenero);
+        $this->smarty->display('templates/peliculasConEsteGenre.tpl');
+    }
 }

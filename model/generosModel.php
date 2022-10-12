@@ -15,20 +15,6 @@ class generosModel{
         return $generos;
     }
 
-    function obtenerGenero($genero){
-        $query = $this->db->prepare('SELECT * FROM generos WHERE id_genero = ?');
-        $query -> execute(array($genero));
-        $genre=$query->fetchAll(PDO::FETCH_OBJ);
-        foreach ($genre as $peliculas) {
-            $query = $this->db->prepare('SELECT * FROM peliculas WHERE id_genero = ?');
-            $query->execute([$peliculas->id_genero]);
-            $pelicula = $query->fetchAll(PDO::FETCH_OBJ);
-            $genre=$pelicula;
-            
-
-        }
-        return $genre;
-    }
 
     function agregarGenero($genero){
         $query = $this->db->prepare("INSERT INTO generos nombre VALUE ?");
@@ -36,11 +22,11 @@ class generosModel{
     }
 
     function eliminarGenero($idGenero){
-        $query = $this->db->prepare("DELETE FROM generos WHERE Id_genero=?");
+        $query = $this->db->prepare("DELETE FROM generos WHERE id_genero=?");
         $query->execute(array($idGenero));
     }
     function editarGenero($genero, $idGenero){
-        $query = $this->db->prepare("UPDATE generos SET nombre = ? WHERE Id_genero = ?");
+        $query = $this->db->prepare("UPDATE generos SET nombre = ? WHERE id_genero = ?");
         $query->execute(array($genero, $idGenero));
     }
 }

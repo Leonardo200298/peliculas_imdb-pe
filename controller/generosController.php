@@ -9,18 +9,13 @@ class generosController{
     {
         $this->model = new generosModel();
         $this->view = new generosView();
+       /*  session_start(); */
+
     }
     function obtenerGeneros(){
         $generos=$this-> model->obtenerGeneros();
         $this->view->mostrarGeneros($generos);
     }
-    /* function obtenerUnGenero(){
-        $genero=$this->model->obtenerGenero();
-        $this->view->
 
-    } */
-    function peliculasConEseGenero($id){
-        $peliculasDelGenero=$this->model->obtenerGenero($id);
-        $this->view->mostrarPeliculasDelGenero($peliculasDelGenero);
-    }
+  
 }

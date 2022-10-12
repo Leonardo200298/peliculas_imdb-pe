@@ -10,9 +10,8 @@ class peliculasController{
         $this->model = new peliculasModel();
         $this->view = new peliculasView();
 
-        //
-        session_start();
-    }
+/*         session_start();
+ */  }
     function obtenerPeliculas(){
         $movies=$this->model->obtenerPeliculasModel();
         
@@ -23,6 +22,9 @@ class peliculasController{
         $moviesDetail=$this->model->detallesDePelicula($id);
         $this->view->mostrarDetalle($moviesDetail);
     }
-   
+    function peliculasConEseGenero($id){
+        $peliculasDelGenero=$this->model->peliculasConEseGenero($id);
+        $this->view->mostrarPeliculas($peliculasDelGenero);
+    }
   
 }

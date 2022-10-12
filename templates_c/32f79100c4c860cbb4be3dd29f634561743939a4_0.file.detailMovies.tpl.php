@@ -1,30 +1,32 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-10 20:01:48
+/* Smarty version 4.2.1, created on 2022-10-12 21:08:38
   from '/opt/lampp/htdocs/carpeta/leo-imdb/templates/detailMovies.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_63445e0cc054a1_95422400',
+  'unifunc' => 'content_634710b673c766_96351718',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '32f79100c4c860cbb4be3dd29f634561743939a4' => 
     array (
       0 => '/opt/lampp/htdocs/carpeta/leo-imdb/templates/detailMovies.tpl',
-      1 => 1665417408,
+      1 => 1665601711,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
+    'file:header.tpl' => 1,
   ),
 ),false)) {
-function content_63445e0cc054a1_95422400 (Smarty_Internal_Template $_smarty_tpl) {
-?><h1><?php echo $_smarty_tpl->tpl_vars['detalles']->value;?>
+function content_634710b673c766_96351718 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+<h1><?php echo $_smarty_tpl->tpl_vars['detalles']->value;?>
 </h1>
-
-
 
 <ul class="list-group">
 <?php
