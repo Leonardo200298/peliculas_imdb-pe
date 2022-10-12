@@ -22,7 +22,6 @@ class peliculasModel{
             $genero = $query->fetch(PDO::FETCH_OBJ);
             $detalle->id_genero=$genero->genero;
         }
-        var_dump($movieDetail);
         return $movieDetail;
     }
     function peliculasConEseGenero($id){
@@ -37,6 +36,11 @@ class peliculasModel{
     function eliminarPelicula($id){
         $query = $this->db->prepare("DELETE FROM peliculas WHERE id_peliculas = ?");
         $query->execute([$id]);
+    }
+
+    function editarPelicula($nombreDePeli, $idPelicula){
+        $query = $this->db->prepare("UPDATE peliculas SET nombre = ? WHERE id_peliculas = ?");
+        $query->execute([$nombreDePeli, $idPelicula]);
     }
     
 }

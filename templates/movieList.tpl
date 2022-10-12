@@ -10,6 +10,7 @@
         {/foreach}
         
     {else}
+        {include file="formMovies.tpl"}
         {foreach from=$movieArrays item=$movie}
             <li class="list-group-item list-group-item-action list-group-item-primary"><a href="borrar/{$movie->id_peliculas}" type="button" class="btn btn-outline-danger">Borrar</a>
             <button type="button" class="btn btn-outline-success">Editar</button> Nombre: <a href='detalles/{$movie->id_peliculas}'>{$movie->nombre}</a></li>

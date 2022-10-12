@@ -25,8 +25,5 @@ class generosModel{
         $query = $this->db->prepare("DELETE FROM generos WHERE id_genero=?");
         $query->execute(array($idGenero));
     }
-    function editarGenero($genero, $idGenero){
-        $query = $this->db->prepare("UPDATE generos SET nombre = ? WHERE id_genero = ?");
-        $query->execute(array($genero, $idGenero));
-    }
+   
 }
