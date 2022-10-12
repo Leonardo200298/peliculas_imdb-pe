@@ -17,6 +17,6 @@
     {if !isset($smarty.session.USER_ID)}
         <h1>Logueate <span><a href="login">aqui</a></span></h1>
     {else}
-        <a href="logout">Logout user:{$smarty.session.USER_EMAIL}</a>
+        <h1><a href="logout">Logout</a></h1>
     {/if}
 </body>

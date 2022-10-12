@@ -26,5 +26,9 @@ class peliculasController{
         $peliculasDelGenero=$this->model->peliculasConEseGenero($id);
         $this->view->mostrarPeliculas($peliculasDelGenero);
     }
+    function borrarPeli($id){
+        $this->model->eliminarPelicula($id);
+        header('Location: '. BASE_URL);
+    }
   
 }

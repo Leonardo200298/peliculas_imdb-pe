@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-11 20:45:58
+/* Smarty version 4.2.1, created on 2022-10-12 22:22:15
   from '/opt/lampp/htdocs/carpeta/leo-imdb/templates/header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6345b9e6dd5301_30413420',
+  'unifunc' => 'content_634721f7236167_44208871',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2808d4a81d8e97add85d7ed3e9237c20b60cf97e' => 
     array (
       0 => '/opt/lampp/htdocs/carpeta/leo-imdb/templates/header.tpl',
-      1 => 1665513954,
+      1 => 1665605650,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6345b9e6dd5301_30413420 (Smarty_Internal_Template $_smarty_tpl) {
+function content_634721f7236167_44208871 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -41,8 +41,7 @@ function content_6345b9e6dd5301_30413420 (Smarty_Internal_Template $_smarty_tpl)
     <?php if (!(isset($_SESSION['USER_ID']))) {?>
         <h1>Logueate <span><a href="login">aqui</a></span></h1>
     <?php } else { ?>
-        <a href="logout">Logout user:<?php echo $_SESSION['USER_EMAIL'];?>
-</a>
+        <h1><a href="logout">Logout</a></h1>
     <?php }?>
 </body><?php }
 }
