@@ -9,14 +9,10 @@ class peliculasController{
     {
         $this->model = new peliculasModel();
         $this->view = new peliculasView();
-
-/*         session_start();
- */  }
+    }
     function obtenerPeliculas(){
         $movies=$this->model->obtenerPeliculasModel();
-        
         $this->view->mostrarPeliculas($movies);
-
     }
     function detallesDePeliculas($id){
         $moviesDetail=$this->model->detallesDePelicula($id);
@@ -28,6 +24,16 @@ class peliculasController{
     }
     function borrarPeli($id){
         $this->model->eliminarPelicula($id);
+        header('Location: '. BASE_URL);
+    }
+    public function agregarPelicula(){
+        $nombre = $_POST['nombre'];
+        $fechaDeLanzamiento = $_POST['fecha-de-lanzamiento'];
+        $costoDeProduccion = $_POST['costo-de-produccion'];
+        $recaudacion = $_POST['recaudacion'];
+        $genero = $_POST['genero'];
+
+        $this->model->agregarPeliculaAlaDB($nombre,$fechaDeLanzamiento,$costoDeProduccion,$recaudacion,$genero);
         header('Location: '. BASE_URL);
     }
   

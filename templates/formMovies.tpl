@@ -1,12 +1,38 @@
+<h2>Crea tu pelicula</h2>
 <form>
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    <label for="exampleInputEmail1" class="form-label">Nombre</label>
+    <input name="nombre" type="text" aria-describedby="emailHelp">
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
+    <label for="exampleInputPassword1" class="form-label">Fecha de lanzamiento</label>
+    <input name="fecha-de-lanzamiento" type="text">
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Costo de producción</label>
+    <input name="costo-de-produccion" type="text">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Recaudación</label>
+    <input name="recaudacion" type="text">
+  </div>
+  <div class="mb-3">
+    <label for="disabledSelect" class="form-label">Seleccione un genero</label>
+    <select name="genero" class="form-select">
+
+      <option>aventura</option>
+      <option>ciencia ficcion</option>
+      <option>comedia</option>
+      <option>terror</option>
+      <option>accion</option>
+      <option>romance</option>
+      <option>musical</option>
+      <option>drama</option>
+      <option>animacion</option>
+
+
+
+    </select>
+  </div>
+  <a href="add" type="submit" class="btn btn-primary">Crear</a>
 </form>

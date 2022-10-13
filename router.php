@@ -60,6 +60,10 @@ switch ($params[0]) {
         $id = $params[1];
         $peliculasController->borrarPeli($id);
         break;
+    case 'add':
+        $peliculasController = new peliculasController();
+        $peliculasController->agregarPelicula();
+        break;
     default:
         echo ('404 Page not found');
         break;

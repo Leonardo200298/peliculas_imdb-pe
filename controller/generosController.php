@@ -15,6 +15,7 @@ class generosController{
     function obtenerGeneros(){
         $generos=$this-> model->obtenerGeneros();
         $this->view->mostrarGeneros($generos);
+        
     }
 
   

@@ -10,10 +10,11 @@ class generosView{
     }
 
     function mostrarGeneros($generos){
-       
         $this->smarty->assign('generos',"Todos los generos");
         $this->smarty->assign('genreArrays', $generos);
         $this->smarty->display('templates/genreList.tpl');
-    }
+
+}
+
    
 }

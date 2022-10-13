@@ -11,19 +11,6 @@ class generosModel{
         $query = $this->db->prepare('SELECT * FROM generos');
         $query -> execute();
         $generos = $query->fetchAll(PDO::FETCH_OBJ);
-
         return $generos;
     }
-
-
-    function agregarGenero($genero){
-        $query = $this->db->prepare("INSERT INTO generos nombre VALUE ?");
-        $query->execute(array($genero));
-    }
-
-    function eliminarGenero($idGenero){
-        $query = $this->db->prepare("DELETE FROM generos WHERE id_genero=?");
-        $query->execute(array($idGenero));
-    }
-   
 }
