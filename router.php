@@ -33,6 +33,7 @@ switch ($params[0]) {
         $peliculasController->obtenerPeliculas();
         $generoController->obtenerGeneros();
         break;
+    
     case 'detalles':
         $peliculasController = new peliculasController();
         $id = $params[1];

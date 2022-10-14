@@ -49,8 +49,11 @@ class peliculasModel{
 
     function agregarPeliculaAlaDB($nombre,$fechaDeLanzamiento,$costoDeProduccion,$recaudacion,$genero){
         $query = $this->db->prepare("INSERT INTO peliculas (nombre, anio, produccion, recaudacion, id_genero) VALUES (?, ?, ?, ?, ?)");
-        $query->execute([$nombre,$fechaDeLanzamiento,$costoDeProduccion,$recaudacion,$genero]);
 
+        $query->execute([$nombre,$fechaDeLanzamiento,$costoDeProduccion,$recaudacion,$genero]);
+        $error=$query->errorInfo();
+        var_dump($error);
+        die();
 
     }
     

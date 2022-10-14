@@ -1,3 +1,4 @@
+{* {include file="genreList.tpl"}
 <h2>Crea tu pelicula</h2>
 <form method="POST" action="add">
   <div class="mb-3">
@@ -19,20 +20,14 @@
   <div class="mb-3">
     <label for="disabledSelect" class="form-label">Seleccione un genero</label>
     <select name="genero" class="form-select">
-
-      <option>aventura</option>
-      <option>ciencia ficcion</option>
-      <option>comedia</option>
-      <option>terror</option>
-      <option>accion</option>
-      <option>romance</option>
-      <option>musical</option>
-      <option>drama</option>
-      <option>animacion</option>
+    {foreach from=$genreArrays item=$genre}
+      <option>{$genre->id_genero}</option>
+    {/foreach}
+    
 
 
 
     </select>
   </div>
   <button type="submit" class="btn btn-primary">Crear</button>
-</form>
+</form> *}

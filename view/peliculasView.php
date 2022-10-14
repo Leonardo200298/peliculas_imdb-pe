@@ -25,4 +25,5 @@ class peliculasView{
         $this->smarty->assign('generosDePeliculas', $peliculasDelGenero);
         $this->smarty->display('templates/peliculasConEsteGenre.tpl');
     }
+ 
 }
