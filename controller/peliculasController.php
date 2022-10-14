@@ -32,7 +32,7 @@ class peliculasController{
         $costoDeProduccion = $_POST['costo-de-produccion'];
         $recaudacion = $_POST['recaudacion'];
         $genero = $_POST['genero'];
-
+        var_dump($nombre,$fechaDeLanzamiento,$costoDeProduccion,$recaudacion,$genero);
         $this->model->agregarPeliculaAlaDB($nombre,$fechaDeLanzamiento,$costoDeProduccion,$recaudacion,$genero);
         header('Location: '. BASE_URL);
     }

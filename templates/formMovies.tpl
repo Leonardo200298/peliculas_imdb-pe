@@ -1,5 +1,5 @@
 <h2>Crea tu pelicula</h2>
-<form>
+<form method="POST" action="add">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Nombre</label>
     <input name="nombre" type="text" aria-describedby="emailHelp">
@@ -34,5 +34,5 @@
 
     </select>
   </div>
-  <a href="add" type="submit" class="btn btn-primary">Crear</a>
+  <button type="submit" class="btn btn-primary">Crear</button>
 </form>
