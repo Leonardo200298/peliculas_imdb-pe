@@ -17,6 +17,15 @@ class generosController{
         $this->view->mostrarGeneros($generos);
         
     }
+    public function agregarGenero(){
+        $nombreGenre = $_POST['nombre'];
+        $this->model->crearGeneroDb($nombreGenre);
+        header('Location: '. BASE_URL);
+    }
 
+    public function borrar($id){
+        $this->model->eliminarGenero($id);
+        header('Location: '. BASE_URL);
+    }
   
 }

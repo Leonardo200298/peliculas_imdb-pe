@@ -13,4 +13,16 @@ class generosModel{
         $generos = $query->fetchAll(PDO::FETCH_OBJ);
         return $generos;
     }
+
+    //funciones para admin
+
+    function crearGeneroDb($nombreGenre){
+        $query = $this->db->prepare('INSERT INTO generos (genero) VALUES (?)');
+        $query->execute([$nombreGenre]);
+        
+    }
+    function eliminarGenero($id){
+        $query = $this->db->prepare("DELETE FROM generos WHERE id_genero = ?");
+        $query->execute([$id]);
+    }
 }

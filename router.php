@@ -65,6 +65,13 @@ switch ($params[0]) {
         $peliculasController = new peliculasController();
         $peliculasController->agregarPelicula();
         break;
+    case 'add-genres':
+        $generoController = new generosController();
+        $generoController->agregarGenero();
+        break;
+    case 'delete-genres':
+        $generoController = new generosController();
+        $generoController->borrar($params[1]);
     default:
         echo ('404 Page not found');
         break;
