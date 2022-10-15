@@ -14,7 +14,7 @@ class generosView{
         $this->smarty->assign('genreArrays', $generos);
         $this->smarty->display('templates/genreList.tpl');
 
-}
-
+    }
+   
    
 }

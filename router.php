@@ -33,7 +33,6 @@ switch ($params[0]) {
         $peliculasController->obtenerPeliculas();
         $generoController->obtenerGeneros();
         break;
-    
     case 'detalles':
         $peliculasController = new peliculasController();
         $id = $params[1];
@@ -72,6 +71,11 @@ switch ($params[0]) {
     case 'delete-genres':
         $generoController = new generosController();
         $generoController->borrar($params[1]);
+        break;
+    case 'edit-movies':
+        $peliculasController = new peliculasController();
+        $peliculasController->editar($params[1]);
+        break;
     default:
         echo ('404 Page not found');
         break;

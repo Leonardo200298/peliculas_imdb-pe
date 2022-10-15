@@ -41,12 +41,14 @@
 
     {/foreach}
 
-    {else}
+  {else}
 
     {foreach from=$genreArrays item=$genre}
+
       <li>
         <a href='peliculas/{$genre->id_genero}'>Nombre de genero: {$genre->genero}</a>
         <a href="delete-genres/{$genre->id_genero}" class="btn btn-outline-danger">borrar</a>
+
       </li>
     {/foreach}
 

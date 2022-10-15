@@ -10,10 +10,6 @@ class peliculasModel{
         $query = $this->db->prepare('SELECT * FROM peliculas');
         $query -> execute();
         $peliculas = $query->fetchAll(PDO::FETCH_OBJ);
-        
-       
-        
-        
         return $peliculas;
     }
     function detallesDePelicula($id){
@@ -42,9 +38,9 @@ class peliculasModel{
         $query->execute([$id]);
     }
 
-    function editarPelicula($nombreDePeli, $idPelicula){
-        $query = $this->db->prepare("UPDATE peliculas SET nombre = ? WHERE id_peliculas = ?");
-        $query->execute([$nombreDePeli, $idPelicula]);
+    function editarPelicula($nombre,$fechaDeLanzamiento,$costoDeProduccion,$recaudacion,$genero){
+        $query = $this->db->prepare("UPDATE peliculas SET nombre = ?, anio = ?, produccion = ?, recaudacion=?, id_genero=? WHERE `id_genero` = ?");
+        $query->execute([$nombre,$fechaDeLanzamiento,$costoDeProduccion,$recaudacion,$genero]);
     }
 
     function agregarPeliculaAlaDB($nombre,$fechaDeLanzamiento,$costoDeProduccion,$recaudacion,$genero){

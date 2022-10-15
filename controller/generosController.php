@@ -26,6 +26,8 @@ class generosController{
     public function borrar($id){
         $this->model->eliminarGenero($id);
         header('Location: '. BASE_URL);
+      
+        
     }
   
 }

@@ -36,5 +36,15 @@ class peliculasController{
       
         header('Location: '. BASE_URL);
     }
+    public function editar($id){
+        $nombre = $_POST['nombre'];
+        $fechaDeLanzamiento = $_POST['fecha-de-lanzamiento'];
+        $costoDeProduccion = $_POST['costo-de-produccion'];
+        $recaudacion = $_POST['recaudacion'];
+        $genero = $_POST['genero'];
+        $this->model->editarPelicula($nombre,$fechaDeLanzamiento,$costoDeProduccion,$recaudacion,$genero);
+        header('Location: '. BASE_URL);
+
+    }
   
 }
