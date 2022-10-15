@@ -20,17 +20,8 @@
     <label for="disabledSelect" class="form-label">Seleccione un genero</label>
     <select name="genero" class="form-select">
     {foreach from=$genreArrays item=$genre}
-      <option>{$genre->id_genero}</option>
+      <option value="{$genre->id_genero}">{$genre->genero}</option>
     {/foreach}
-    {*   <option>aventura</option>
-      <option>ciencia ficcion</option>
-      <option>comedia</option>
-      <option>terror</option>
-      <option>accion</option>
-      <option>romance</option>
-      <option>musical</option>
-      <option>drama</option>
-      <option>animacion</option> *}
 
 
 
@@ -47,3 +38,4 @@
       
     {/foreach}
 </ul>
+

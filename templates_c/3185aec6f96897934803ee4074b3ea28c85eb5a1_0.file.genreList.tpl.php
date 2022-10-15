@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-14 21:48:49
+/* Smarty version 4.2.1, created on 2022-10-15 19:33:53
   from '/opt/lampp/htdocs/carpeta/leo-imdb/templates/genreList.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6349bd214241c6_36934522',
+  'unifunc' => 'content_634aef01a55471_06224112',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3185aec6f96897934803ee4074b3ea28c85eb5a1' => 
     array (
       0 => '/opt/lampp/htdocs/carpeta/leo-imdb/templates/genreList.tpl',
-      1 => 1665776926,
+      1 => 1665855230,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6349bd214241c6_36934522 (Smarty_Internal_Template $_smarty_tpl) {
+function content_634aef01a55471_06224112 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h2>Crea tu pelicula</h2>
 <form method="POST" action="add">
   <div class="mb-3">
@@ -48,12 +48,13 @@ $_smarty_tpl->tpl_vars['genre']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['genre']->value) {
 $_smarty_tpl->tpl_vars['genre']->do_else = false;
 ?>
-      <option><?php echo $_smarty_tpl->tpl_vars['genre']->value->id_genero;?>
+      <option value="<?php echo $_smarty_tpl->tpl_vars['genre']->value->id_genero;?>
+"><?php echo $_smarty_tpl->tpl_vars['genre']->value->genero;?>
 </option>
     <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-    
+
 
 
     </select>
