@@ -1,7 +1,7 @@
 {include file="header.tpl"}
 
 <h1>{$peliculas}</h1>
-{if !isset($smarty.session.USER_ID)}
+{if !isset($smarty.session.USER_ID) && $movie == "movie"} 
     <ul class="list-group">
         {foreach from=$movieArrays item=$movie}
             <li class="list-group-item list-group-item-action list-group-item-primary"><a

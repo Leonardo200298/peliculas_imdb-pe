@@ -69,10 +69,8 @@ switch ($params[0]) {
         $generoController->agregarGenero();
         break;
     case 'delete-genres':
-       
-
         $generoController = new generosController();
-        $generoController->borrar($params[1]);
+        $generoController->BorrarGenero($params[1]);
         break;
     case 'edit-movies':
         $peliculasController = new peliculasController();

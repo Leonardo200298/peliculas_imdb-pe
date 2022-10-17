@@ -12,12 +12,14 @@ class peliculasView{
         
         $this->smarty->assign('peliculas', "Todas las peliculas");
         $this->smarty->assign('movieArrays', $movies);
+        $this->smarty->assign('movie',"movie");
         $this->smarty->display('templates/movieList.tpl'); // muestro el template   
         // $this->smarty->display('templates/genreList.tpl'); // muestro el template   
     }
     function mostrarDetalle($moviesDetail){
         $this->smarty->assign('detalles',"Detalles de peliculas");
         $this->smarty->assign('details',$moviesDetail);
+        $this->smarty->assign('movie',"moviedetalle");
         $this->smarty->display('templates/detailMovies.tpl'); // muestro el template   
     }
     function mostrarPeliculasDelGenero($peliculasDelGenero){

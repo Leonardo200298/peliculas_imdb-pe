@@ -25,13 +25,13 @@ class generosController{
         header('Location: '. BASE_URL);
     }
 
-    public function borrar($id){
+    function BorrarGenero($id_genero){
         
-        $this->model->eliminarGenero($id);
-
-        header('Location: '. BASE_URL);
+        $this->view->error("No se puede eliminar el genero ya que contiene peliculas relacionadas a ese genero, eliminelas y vuelva a realizar la accion");
         
-      
+        
+        $this->model->EliminarGenero($id_genero);
+        header("location:" . BASE_URL);
         
     }
     public function editarGenero($id){

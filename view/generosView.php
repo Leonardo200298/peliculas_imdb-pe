@@ -15,7 +15,7 @@ class generosView{
         $this->smarty->display('templates/genreList.tpl');
 
     }
-    function mostrarError($error=null){
+    function error($error=null){
         $this->smarty->assign("error", $error);
         $this->smarty->display('newTemplate.tpl');
     }
