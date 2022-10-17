@@ -1,22 +1,28 @@
 {include file="header.tpl"}
 
 <h1>{$peliculas}</h1>
-<ul class="list-group">
-    {if !isset($smarty.session.USER_ID)}
+{if !isset($smarty.session.USER_ID)}
+    <ul class="list-group">
         {foreach from=$movieArrays item=$movie}
             <li class="list-group-item list-group-item-action list-group-item-primary"><a
                     href='detalles/{$movie->id_peliculas}'>Nombre: {$movie->nombre}</a></li>
 
         {/foreach}
+    </ul>
 
-    {else}
-        {foreach from=$movieArrays item=$movie}
-            <li class="list-group-item list-group-item-action list-group-item-primary"><a href="borrar/{$movie->id_peliculas}"
-                    type="button" class="btn btn-outline-danger">Borrar</a>
-                Nombre: <a href='detalles/{$movie->id_peliculas}'>{$movie->nombre}</a>
-            </li>
+{else}
 
-        {/foreach}
+        <ul class="list-group">
+            {foreach from=$movieArrays item=$movie}
+                <li class="list-group-item list-group-item-action list-group-item-primary"><a href="borrar/{$movie->id_peliculas}"
+                        type="button" class="btn btn-outline-danger">Borrar</a>
+                    Nombre: <a href='detalles/{$movie->id_peliculas}'>{$movie->nombre}</a>
+                </li>
+
+            {/foreach}
+        </ul>
+
+    
 
         <h1>Editar pelicula</h1>
         <form method="POST" action="edit-movies">
@@ -46,6 +52,7 @@
             </div>
             <button type="submit" class="btn btn-primary">Editar</button>
         </form>
-        </ul>
-        
-            {/if}
+    
+
+
+{/if}

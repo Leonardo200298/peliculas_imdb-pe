@@ -1,5 +1,5 @@
 {include file="header.tpl" }
-
+<a class="btn btn-primary" href="">Home</a>
 <h1>{$detalles}</h1>
 
 <ul class="list-group">
