@@ -1,4 +1,5 @@
 <?php
+
 class peliculasModel{
     private $db;
 
@@ -38,9 +39,10 @@ class peliculasModel{
         $query->execute([$id]);
     }
 
-    function editarPelicula($nombre,$fechaDeLanzamiento,$costoDeProduccion,$recaudacion,$genero){
-        $query = $this->db->prepare("UPDATE peliculas SET nombre = ?, anio = ?, produccion = ?, recaudacion=?, id_genero=? WHERE `id_genero` = ?");
-        $query->execute([$nombre,$fechaDeLanzamiento,$costoDeProduccion,$recaudacion,$genero]);
+  
+    function editarPelicula($nombre,$fechaDeLanzamiento,$costoDeProduccion,$recaudacion,$id_peliculas){
+        $query = $this->db->prepare("UPDATE peliculas SET nombre = ?, anio = ?, produccion = ?, recaudacion=? WHERE id_peliculas = ?");
+        $query->execute(array($nombre,$fechaDeLanzamiento,$costoDeProduccion,$recaudacion,$id_peliculas));
     }
 
     function agregarPeliculaAlaDB($nombre,$fechaDeLanzamiento,$costoDeProduccion,$recaudacion,$genero){

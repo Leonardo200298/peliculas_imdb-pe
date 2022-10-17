@@ -22,7 +22,17 @@ class generosModel{
         
     }
     function eliminarGenero($id){
-        $query = $this->db->prepare("DELETE FROM generos WHERE id_genero = ?");
-        $query->execute([$id]);
+      
+        $query = $this->db->prepare('DELETE FROM generos WHERE id_genero = ?');
+        $query -> execute([$id]);
+        
+       
+     
+        
     }
+    function editarModel($nombre,$genero){
+        $query = $this->db->prepare('UPDATE generos SET genero = ? WHERE id_genero = ?');
+        $query -> execute(array($nombre,$genero));
+    }
+ 
 }

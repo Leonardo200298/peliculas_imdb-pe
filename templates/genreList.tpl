@@ -22,9 +22,6 @@
       {foreach from=$genreArrays item=$genre}
         <option value="{$genre->id_genero}">{$genre->genero}</option>
       {/foreach}
-
-
-
     </select>
   </div>
   <button type="submit" class="btn btn-primary">Crear</button>
@@ -55,11 +52,24 @@
   {/if}
 
 </ul>
-
+<h1>Crear genero</h1>
 <form method="POST" action="add-genres">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Genero</label>
     <input name="nombre" type="text" aria-describedby="emailHelp">
   </div>
   <button type="submit" class="btn btn-primary">Crear</button>
+</form>
+<h1>Editar genero</h1>
+<form method="POST" action="edit-genres">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Genero</label>
+    <input name="nombre" type="text" aria-describedby="emailHelp">
+  </div>
+  <select name="genero" class="form-select">
+    {foreach from=$genreArrays item=$genre}
+      <option value="{$genre->id_genero}">{$genre->genero}</option>
+    {/foreach}
+  </select>
+  <button type="submit" class="btn btn-primary">Editar</button>
 </form>
