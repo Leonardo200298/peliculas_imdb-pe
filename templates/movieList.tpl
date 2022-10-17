@@ -46,6 +46,6 @@
             </div>
             <button type="submit" class="btn btn-primary">Editar</button>
         </form>
-
-    {/if}
-</ul>
+        </ul>
+        
+            {/if}

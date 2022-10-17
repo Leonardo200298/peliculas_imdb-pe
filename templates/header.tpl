@@ -16,7 +16,7 @@
 <body>
     {if !isset($smarty.session.USER_ID)}
         <nav>
-            
+
             <h1>Logueate <span><a href="login">aqui</a></span></h1>
         </nav>
     {else}
