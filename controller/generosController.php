@@ -26,13 +26,15 @@ class generosController{
     }
 
     function BorrarGenero($id_genero){
-        
-        $this->view->error("No se puede eliminar el genero ya que contiene peliculas relacionadas a ese genero, eliminelas y vuelva a realizar la accion");
-        
-        
-        $this->model->EliminarGenero($id_genero);
-        header("location:" . BASE_URL);
-        
+        $pelis = $this->movieModel->peliculasConEseGenero($id_genero);
+        if ($pelis = null) {
+            $this->model->EliminarGenero($id_genero);
+            header('Location: '. BASE_URL);
+        }
+        else {
+            $this->view->error("Este genero no se puede eliminar");
+        }
+
     }
     public function editarGenero($id){
         $nombre = $_POST['nombre'];
