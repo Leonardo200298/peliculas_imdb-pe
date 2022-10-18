@@ -12,9 +12,10 @@ class generosView{
     function mostrarGeneros($generos){
         $this->smarty->assign('generos',"Todos los generos");
         $this->smarty->assign('genreArrays', $generos);
-        $this->smarty->display('templates/genreList.tpl');
 
-    }
+        $this->smarty->display('templates/genreList.tpl');
+      
+    }   
     function error($error=null){
         $this->smarty->assign("error", $error);
         $this->smarty->display('newTemplate.tpl');

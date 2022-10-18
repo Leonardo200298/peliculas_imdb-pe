@@ -14,7 +14,6 @@ class peliculasView{
         $this->smarty->assign('movieArrays', $movies);
         $this->smarty->assign('movie',"movie");
         $this->smarty->display('templates/movieList.tpl'); // muestro el template   
-        // $this->smarty->display('templates/genreList.tpl'); // muestro el template   
     }
     function mostrarDetalle($moviesDetail){
         $this->smarty->assign('detalles',"Detalles de peliculas");
@@ -25,6 +24,7 @@ class peliculasView{
     function mostrarPeliculasDelGenero($peliculasDelGenero){
         $this->smarty->assign('pelicula',"peliculas con este genero");
         $this->smarty->assign('generosDePeliculas', $peliculasDelGenero);
+        
         $this->smarty->display('templates/peliculasConEsteGenre.tpl');
     }
  
