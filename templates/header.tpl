@@ -14,7 +14,7 @@
 </head>
 
 <body>
- 
+    {* No llega $usuario *}
     {if isset({$usuario})}
 
         <h1><a href="logout">Logout</a> {$usuario}</h1>
