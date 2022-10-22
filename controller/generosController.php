@@ -35,6 +35,7 @@ class generosController{
             $this->view->error("Este genero no se puede eliminar");
         }
 
+
     }
     public function editarGenero($id){
         $nombre = $_POST['nombre'];

@@ -24,7 +24,6 @@ adentro, si no te anda tiraselo a todo el proyecto y fue */
 // parsea la accion Ej: dev/juan --> ['dev', juan]
 $params = explode('/', $action);
 
-session_start();
 // determina que camino seguir según la acción
 switch ($params[0]) {
     case 'home':

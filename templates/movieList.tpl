@@ -12,7 +12,7 @@
 
 {else}
 
-
+    
     <ul class="list-group">
         {foreach from=$movieArrays item=$movie}
             <li class="list-group-item list-group-item-action list-group-item-primary"><a href="borrar/{$movie->id_peliculas}"

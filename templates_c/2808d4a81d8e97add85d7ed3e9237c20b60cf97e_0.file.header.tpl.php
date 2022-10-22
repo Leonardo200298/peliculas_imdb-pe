@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-17 17:11:30
+/* Smarty version 4.2.1, created on 2022-10-23 00:07:22
   from '/opt/lampp/htdocs/carpeta/leo-imdb/templates/header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_634d70a2316475_01093743',
+  'unifunc' => 'content_6354699a685956_66433019',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_634d70a2316475_01093743 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6354699a685956_66433019 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
