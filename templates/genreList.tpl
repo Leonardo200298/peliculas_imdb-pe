@@ -2,7 +2,7 @@
 
 <h1>{$generos}</h1>
 
-{if !isset($smarty.session.USER_ID)}
+{* {if !isset($smarty.session.USER_ID)}
   <ul class="list-group">
     {foreach from=$genreArrays item=$genre}
       <li class="list-group-item list-group-item-action list-group-item-danger"><a
@@ -12,7 +12,7 @@
     {/foreach}
   </ul>
 
-{else}
+{else} *}
   <h2>Crea tu pelicula</h2>
 <form method="POST" action="add">
   <div class="mb-3">
@@ -73,4 +73,4 @@
       <button type="submit" class="btn btn-primary">Editar</button>
     </form>
 
-{/if}
+{* {/if} *}

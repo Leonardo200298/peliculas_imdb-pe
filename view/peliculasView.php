@@ -7,8 +7,9 @@ class peliculasView{
     {
         $this->smarty = new Smarty();
     }
-
+    
     function mostrarPeliculas($movies){  
+        
         
         $this->smarty->assign('peliculas', "Todas las peliculas");
         $this->smarty->assign('movieArrays', $movies);

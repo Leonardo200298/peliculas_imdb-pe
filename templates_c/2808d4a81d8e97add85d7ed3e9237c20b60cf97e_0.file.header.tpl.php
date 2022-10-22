@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-23 00:07:22
+/* Smarty version 4.2.1, created on 2022-10-23 01:49:42
   from '/opt/lampp/htdocs/carpeta/leo-imdb/templates/header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6354699a685956_66433019',
+  'unifunc' => 'content_63548196a4b4c2_93053771',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2808d4a81d8e97add85d7ed3e9237c20b60cf97e' => 
     array (
       0 => '/opt/lampp/htdocs/carpeta/leo-imdb/templates/header.tpl',
-      1 => 1666019460,
+      1 => 1666482580,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6354699a685956_66433019 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63548196a4b4c2_93053771 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -38,13 +38,19 @@ function content_6354699a685956_66433019 (Smarty_Internal_Template $_smarty_tpl)
 </head>
 
 <body>
-    <?php if (!(isset($_SESSION['USER_ID']))) {?>
+ 
+    <?php ob_start();
+echo $_smarty_tpl->tpl_vars['usuario']->value;
+$_prefixVariable1 = ob_get_clean();
+if ((isset($_prefixVariable1))) {?>
+
+        <h1><a href="logout">Logout</a> <?php echo $_smarty_tpl->tpl_vars['usuario']->value;?>
+</h1>
+    <?php } else { ?>
         <nav>
 
             <h1>Logueate <span><a href="login">aqui</a></span></h1>
         </nav>
-    <?php } else { ?>
-        <h1><a href="logout">Logout</a></h1>
     <?php }?>
 </body><?php }
 }

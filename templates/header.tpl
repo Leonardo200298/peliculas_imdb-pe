@@ -14,12 +14,14 @@
 </head>
 
 <body>
-    {if !isset($smarty.session.USER_ID)}
+ 
+    {if isset({$usuario})}
+
+        <h1><a href="logout">Logout</a> {$usuario}</h1>
+    {else}
         <nav>
 
             <h1>Logueate <span><a href="login">aqui</a></span></h1>
         </nav>
-    {else}
-        <h1><a href="logout">Logout</a></h1>
     {/if}
 </body>

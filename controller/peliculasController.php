@@ -1,14 +1,18 @@
 <?php
 require_once './model/peliculasModel.php';
 require_once './view/peliculasView.php';
+require_once './helpers/auth.helper.php';
 
 class peliculasController{
     private $model;
     private $view;
+    private $auth;
+
     function __construct()
     {
         $this->model = new peliculasModel();
         $this->view = new peliculasView();
+        $this->auth = new AuthHelper();
     }
     function obtenerPeliculas(){
         $movies=$this->model->obtenerPeliculasModel();
@@ -23,10 +27,12 @@ class peliculasController{
         $this->view->mostrarPeliculas($peliculasDelGenero);
     }
     function borrarPeli($id){
+        $this->auth->checkLoggedIn();
         $this->model->eliminarPelicula($id);
         header('Location: '. BASE_URL);
     }
     public function agregarPelicula(){
+        $this->auth->checkLoggedIn();
         $nombre = $_POST['nombre'];
         $fechaDeLanzamiento = $_POST['fecha-de-lanzamiento'];
         $costoDeProduccion = $_POST['costo-de-produccion'];
@@ -37,14 +43,12 @@ class peliculasController{
         header('Location: '. BASE_URL);
     }
     public function editar(){
+        $this->auth->checkLoggedIn();
         $nombre = $_POST['nombre'];
         $fechaDeLanzamiento = $_POST['fecha-de-lanzamiento'];
         $costoDeProduccion = $_POST['costo-de-produccion'];
         $recaudacion = $_POST['recaudacion'];
         $id_peliculas = $_POST['pelicula'];
-        //$genero = $_POST["genero"];
-        // var_dump($nombre,$fechaDeLanzamiento,$costoDeProduccion,$recaudacion,$id_peliculas);
-        // die();
         $this->model->editarPelicula($nombre,$fechaDeLanzamiento,$costoDeProduccion,$recaudacion,$id_peliculas);
         header('Location: '. BASE_URL);
 
