@@ -15,9 +15,9 @@
 
 <body>
     {* No llega $usuario *}
-    {if isset({$usuario})}
+    {if isset($smarty.session.USER_ID)}
 
-        <h1><a href="logout">Logout</a> {$usuario}</h1>
+        <h1><a href="logout">Logout</a> {$smarty.session.USER_EMAIL}</h1>
     {else}
         <nav>
 
