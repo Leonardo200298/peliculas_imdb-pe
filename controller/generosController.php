@@ -2,17 +2,20 @@
 require_once './model/generosModel.php';
 require_once './view/generosView.php';
 require_once './helpers/auth.helper.php';
+require_once './model/peliculasModel.php';
 
 class generosController
 {
     private $model;
     private $view;
     private $auth;
+    private $movieModel;
     function __construct()
     {
         $this->model = new generosModel();
         $this->view = new generosView();
         $this->auth = new AuthHelper();
+        $this->movieModel = new peliculasModel();
     }
     function obtenerGeneros()
     {
@@ -31,7 +34,7 @@ class generosController
     {
         $this->auth->checkLoggedIn();
         $pelis = $this->movieModel->peliculasConEseGenero($id_genero);
-        if ($pelis = null) {
+        if ($pelis == null) {
             $this->model->EliminarGenero($id_genero);
             header('Location: ' . BASE_URL);
         } else {
