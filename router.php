@@ -34,8 +34,14 @@ switch ($params[0]) {
         break;
     case 'detalles':
         $peliculasController = new peliculasController();
-        $id = $params[1];
-        $peliculasController->detallesDePeliculas($id);
+        if (!isset($params[1])) {
+            $peliculasController->obtenerPeliculas();
+            
+        }else{
+            $id = $params[1];
+            $peliculasController->detallesDePeliculas($id);
+
+        }
         break;
     case 'peliculas':
         $peliculasController = new peliculasController();

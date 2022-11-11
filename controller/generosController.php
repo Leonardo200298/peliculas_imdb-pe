@@ -38,7 +38,7 @@ class generosController
             $this->model->EliminarGenero($id_genero);
             header('Location: ' . BASE_URL);
         } else {
-            $this->view->error("Este genero no se puede eliminar");
+            $this->view->error("Este genero no se puede eliminar, debe eliminar todas las peliculas que sean de este genero");
         }
     }
     public function editarGenero($id)
