@@ -44,7 +44,7 @@
             <input name="recaudacion" type="text">
         </div>
         <div class="mb-3">
-            <label for="disabledSelect" class="form-label">Seleccione un genero</label>
+            <label for="disabledSelect" class="form-label">Pelicula</label>
             <select name="pelicula" class="form-select">
                 {foreach from=$movieArrays item=$movie}
                     <option value="{$movie->id_peliculas}">{$movie->nombre}</option>

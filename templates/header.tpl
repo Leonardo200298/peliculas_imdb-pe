@@ -16,11 +16,11 @@
 <body>
     {* No llega $usuario *}
     {if isset($smarty.session.USER_ID)}
-
+        <img src="../../peliculas_imdb-pe/assets/images/logo2.png">
         <h1><a href="logout">Logout</a> {$smarty.session.USER_EMAIL}</h1>
     {else}
         <nav>
-
+            <img src="../../peliculas_imdb-pe/assets/images/logo2.png">
             <h1>Logueate <span><a href="login">aqui</a></span></h1>
         </nav>
     {/if}

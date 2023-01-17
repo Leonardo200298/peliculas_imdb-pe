@@ -23,5 +23,5 @@
 
   {/if}
   
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary">login</button>
 </form>

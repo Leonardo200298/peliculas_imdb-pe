@@ -26,7 +26,7 @@ class AuthController{
 
         $usuario = $this->model->conseguirUsuarioPorMail($email);
         
-        $this->view->paraELHeader($_SESSION['USER_EMAIL']);
+        /* $this->view->paraELHeader($_SESSION['USER_EMAIL']); */
         if ($usuario && password_verify($contrasenia, $usuario->contrasenia)){
             session_start();
             $_SESSION['USER_ID'] = $usuario->id;
